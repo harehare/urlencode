@@ -1,0 +1,46 @@
+{
+    "name": "urlencode",
+    "displayName": "URLEncode/Decode",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "harehare1110",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.urlencode",
+        "onCommand:extension.urldecode"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.urlencode",
+                "title": "URL: Encode"
+            },
+            {
+                "command": "extension.urldecode",
+                "title": "URL: Decode"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.urlencode",
+                "key": "ctrl+shift+e"
+            },
+            {
+                "command": "extension.urldecode",
+                "key": "ctrl+shift+d"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+}
